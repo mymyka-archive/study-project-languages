@@ -9,6 +9,21 @@ export const useUserStore = defineStore("user", {
     password: "",
   }),
 
+  getters: {
+    getFirstName() {
+      return this.firstName;
+    },
+    getLastName() {
+      return this.lastName;
+    },
+    getEmail() {
+      return this.email;
+    },
+    getPassword() {
+      return this.password;
+    },
+  },
+
   actions: {
     setFirstName(firstName) {
       this.firstName = firstName;
@@ -21,6 +36,9 @@ export const useUserStore = defineStore("user", {
     },
     setPassword(password) {
       this.password = password;
+    },
+    logIn(obj) {
+      console.log(obj);
     },
   },
 });
